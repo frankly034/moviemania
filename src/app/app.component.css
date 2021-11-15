@@ -1,6 +1,15 @@
 .container {
   display: flex;
   flex-direction: column;
+  margin: 0 5rem;
+  padding: 0;
+}
+
+.container header {
+  font-size: 1rem;
+  color: #666666;
+  padding: 0 1rem;
+  margin: 0;
 }
 
 .wrapper {
@@ -11,11 +20,13 @@
 }
 
 .sidebar {
-  width: 30%;
-  flex: 1 200px;
+  width: 10%;
+  flex: 1 100px;
+  padding: 1rem;
 }
 
 .content {
-  width: 70%;
-  flex: 3 200px;
+  width: 90%;
+  flex: 9 200px;
+  padding: 1rem;
 }

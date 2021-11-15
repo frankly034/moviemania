@@ -1,0 +1,40 @@
+.nav-header {
+  padding-bottom: 0.5rem;
+  color: #333333;
+  font-size: 1.2rem;
+  border-bottom: 1px #333333 solid;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-item {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.nav-item a:link {
+  color: #666666;
+}
+
+.nav-item a:visited {
+  color: #666666;
+}
+
+.nav-item a:focus {
+  color: #1967d2;
+}
+
+.nav-item a:hover {
+  color: #1967d2;
+}
+
+.nav-item a:active {
+  color: #1967d2;
+}

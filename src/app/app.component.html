@@ -1,10 +1,12 @@
 <div class="container">
   <header>
-    <h1>Moviemania</h1>
+    <h2>Moviemania</h2>
   </header>
   <div class="wrapper">
     <aside class="sidebar">
-      <h2>Category</h2>
+      <mm-side-bar
+      [sideBarMenu]="sideBarMenu"
+      ></mm-side-bar>
     </aside>
     <main class="content">
       <h2>Content</h2>
