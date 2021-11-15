@@ -1,27 +1,110 @@
 # Moviemania
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
+This is an Angular app to help people search through movies by categories, search for specific movies and preview movie details. Its a simple app to demostrate the basic features of the angular framework.
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [Movie Features](#movie-features)
+- [Concepts and Apis Employed](#concepts-and-apis-employed)
+- [Built with](#built-with)
+- [Mock Designs](#mock-designs)
+- [Live Preview](#live-preview)
+- [Required Installations](#required-installations)
+- [Installation of This App](#instalation)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
-## Code scaffolding
+<!-- Movie features -->
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Movie Features
 
-## Build
+- A user upon visiting the app, sees a list of movies in various categories with an option to view more apps in a particular category.
+- Users can also preview a specific movie to see more details.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<!-- concepts and apis employed -->
 
-## Running unit tests
+## Concepts and APIs Employed
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- The API employed for movie information was gotten developed by TMDB [here](https://www.themoviedb.org/).
+- Official API documentation for the movie db can be found [here](https://developers.themoviedb.org/3)
 
-## Running end-to-end tests
+<!-- BUILT wITH -->
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Built with
 
-## Further help
+- HTML5
+- CSS3
+- JavaScript
+- Angular
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<!-- MOCK DESIGNS -->
+
+## Mock Designs
+
+See mock design guides for the app below;
+
+- Home Screen.
+![Image](/src/assets/mocks/home-screen.png)
+- Movie Category List Screen.
+![Image](/src/assets/mocks/category-screen.png)
+- Single Movie View Screen.
+![Image](/src/assets/mocks/single-view-screen.png)
+
+<!-- LIVE PREVIEW -->
+
+## Live Preview
+
+Find the live version [here](https://moviemania-app.netlify.app/).
+Below is a screenshot of what it looks like.
+![Image](/src/assets/mocks/home-screen.png)
+
+<!-- REQUIRED INSTALLATION -->
+
+## Required Installations
+
+- Npm
+
+<!-- INSTALLATION -->
+
+## Installation of This Repository
+
+Once you have installed the required packages shown on the [Required Installations](#required-installations), proceed with the following steps
+
+Clone the Repository
+
+```Shell
+your@pc:~$ git clone git@github.com:frankly034/moviemania-app.git
+```
+
+Move to the downloaded folder
+
+```Shell
+your@pc:~$ cd moviemania
+```
+
+Install all packages
+
+```Shell
+your@pc:~$ npm install
+```
+
+Open the app
+
+```Shell
+your@pc:~$ npm start
+```
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- CONTACT -->
+
+## Contact
+
+- 🇳🇬 Lewis Ugege - franklynugege@gmail.com | [Github Account](https://github.com/frankly034) | [Twitter](https://twitter.com/@wizlulu) | [Linkedin](https://linkedin.com/in/lewis-ugege) | 
+
+## Acknowledgements
+
+- <a href="https://www.themoviedb.org/"> TMDB</a> and God Almighty .
