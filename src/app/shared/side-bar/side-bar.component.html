@@ -1,0 +1,8 @@
+<h2 class="nav-header">Category</h2>
+<ul class="nav-list">
+  <li *ngFor="let menu of sideBarMenu" class="nav-item">
+    <a href="/{{ menu.tag }}" class="nav-link" id="{{ menu.tag }}">
+      {{ menu.title }}
+    </a>
+  </li>
+</ul>
