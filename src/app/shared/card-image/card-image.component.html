@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-image">
+    <img
+      src="https://image.tmdb.org/t/p/original{{ movie.poster_path }}"
+      alt="movie poster"
+    />
+  </div>
+  <div class="card-body">
+    <h3 class="card-title"><span>{{ movie.title | convertToEllipses }}</span> <span>({{ releaseDate.getFullYear()}})</span></h3>
+  </div>
+  <div class="card-footer">
+    <div><span class="fa fa-star" *ngFor="let index of ratingSize"></span></div>
+    {{ movie.vote_count }} votes
+  </div>
+</div>
