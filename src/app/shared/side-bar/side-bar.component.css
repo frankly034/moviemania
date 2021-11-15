@@ -10,6 +10,10 @@
   padding: 0;
 }
 
+.nav-item:nth-child(1) {
+  margin-top: 1rem;
+}
+
 .nav-item {
   margin-bottom: 1rem;
   font-size: 1.1rem;

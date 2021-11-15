@@ -1,15 +1,18 @@
+<header>
+  <h2>Moviemania</h2>
+</header>
 <div class="container">
-  <header>
-    <h2>Moviemania</h2>
-  </header>
   <div class="wrapper">
     <aside class="sidebar">
-      <mm-side-bar
-      [sideBarMenu]="sideBarMenu"
-      ></mm-side-bar>
+      <mm-side-bar [sideBarMenu]="sideBarMenu"></mm-side-bar>
     </aside>
     <main class="content">
       <h2>Content</h2>
+      <div class="category">
+        <div *ngFor="let x of movies">
+          <mm-card-image [movie]="x"></mm-card-image>
+        </div>
+      </div>
     </main>
   </div>
 </div>
