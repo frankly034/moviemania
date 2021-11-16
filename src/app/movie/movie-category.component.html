@@ -1,1 +1,15 @@
-<p>movie-category works!</p>
+<div class="container">
+  <div class="header">
+    <h1>{{ title }}</h1>
+    <div class="input-group">
+      <input type="text" placeholder="Search" [(ngModel)]="filterBy" />
+      <span class="fa fa-search" ></span>
+    </div>
+  </div>
+  <div class="body">
+    <div *ngFor="let movie of filteredMovies; let movieIndex = index">
+      <mm-card-image [movie]="movie"></mm-card-image>
+    </div>
+    <h2 *ngIf="!filteredMovies.length">No items found</h2>
+  </div>
+</div>
