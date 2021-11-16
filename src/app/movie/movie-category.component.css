@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .header {
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  background-color: #FFC400;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container .header h1 {
+  font-size: 1.3rem;
+  color: #994100;
+  display: inline;
+}
+
+.container .body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container .body h2 {
+  color: #666666;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+div.input-group {
+  display: flex;
+  font-size: 1.2rem;
+  color: #666666;
+}
+
+div.input-group input {
+  font-size: 1rem;
+  border: solid thin #666666;
+  border-right: none;
+  padding: 7px 7px;
+  width: 12rem;
+}
+
+div.input-group span {
+  background: white;
+  border: thin solid #666666;
+  border-left: none;
+  margin-left: -5px;
+  padding: 7px;
+}
+
+div.input-group input:focus {
+  outline: none;
+}

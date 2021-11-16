@@ -7,6 +7,8 @@ import { MovieListComponent } from './movie-list.component';
 import { MovieCategoryCardComponent } from './movie-category-card.component';
 import { CardImageComponent } from '../shared/card-image/card-image.component';
 import { ConvertToEllipsesPipe } from '../shared/convert-to-ellipses-pipes/convert-to-ellipses.pipe';
+import { MovieCategoryCardGuard } from './movie-category-card.guard';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,16 @@ import { ConvertToEllipsesPipe } from '../shared/convert-to-ellipses-pipes/conve
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild([
-      { path: 'movie/category/:category', component: MovieCategoryComponent},
-      { path: '', component: MovieListComponent}
+      {
+        path: 'movie/category/:category',
+        canActivate: [MovieCategoryCardGuard],
+        component: MovieCategoryComponent,
+      },
+      { path: '', component: MovieListComponent },
     ]),
   ],
-  exports: [
-    ConvertToEllipsesPipe,
-  ]
+  exports: [ConvertToEllipsesPipe],
 })
-export class MovieModule { }
+export class MovieModule {}
