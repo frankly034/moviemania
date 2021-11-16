@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="header">
+    <h2>{{ movieCategory.title }}</h2>
+    <button (click)="viewAllCategory(movieCategory.tag)">View All</button>
+  </div>
+  <div class="category">
+    <div *ngFor="let movie of movieCategory.movies; let movieIndex=index">
+      <mm-card-image [movie]="movie" *ngIf="movieIndex < 4"></mm-card-image>
+    </div>
+  </div>
+</div>

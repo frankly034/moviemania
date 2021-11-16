@@ -3,20 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { SideBarComponent } from './shared/side-bar/side-bar.component';
-import { CardImageComponent } from './shared/card-image/card-image.component';
-import { ConvertToEllipsesPipe } from './shared/convert-to-ellipses-pipes/convert-to-ellipses.pipe';
+import { MovieModule } from './movie/movie.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     SideBarComponent,
-    CardImageComponent,
-    ConvertToEllipsesPipe,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MovieModule,
+    RouterModule.forRoot([{ path: '', component: AppComponent }]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

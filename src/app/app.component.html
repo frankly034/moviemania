@@ -1,5 +1,5 @@
 <header>
-  <h2>Moviemania</h2>
+  <h2><span class="logo" (click)="goHome()">Moviemania</span></h2>
 </header>
 <div class="container">
   <div class="wrapper">
@@ -7,12 +7,7 @@
       <mm-side-bar [sideBarMenu]="sideBarMenu"></mm-side-bar>
     </aside>
     <main class="content">
-      <h2>Content</h2>
-      <div class="category">
-        <div *ngFor="let x of movies">
-          <mm-card-image [movie]="x"></mm-card-image>
-        </div>
-      </div>
+      <router-outlet></router-outlet>
     </main>
   </div>
 </div>

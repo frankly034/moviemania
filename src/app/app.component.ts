@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Movie } from './shared/card-image/card-image';
+import { Router } from '@angular/router';
 
+import { Movie } from './movie/movie';
 import { SideBarMenu } from './shared/side-bar/side-bar';
 
 @Component({
@@ -203,4 +204,10 @@ export class AppComponent {
     "vote_count": 14
     },
   ];
+
+  constructor(private router: Router){}
+
+  goHome(){
+    this.router.navigate([''])
+  }
 }

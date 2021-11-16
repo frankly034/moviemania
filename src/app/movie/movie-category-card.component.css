@@ -1,0 +1,36 @@
+.container {
+  border-top: 1px solid #666666;
+  padding: 1rem 0;
+}
+
+.container .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+}
+
+.container .header button {
+  padding: 0.5rem 1rem;
+  color: #1967d2;
+  font-size: 0.9rem;
+  background-color: #fefefe;
+  border-radius: 3px;
+  border: thin solid #666666;
+  cursor: pointer;
+}
+
+.container .header button:hover {
+  background-color: #fafafa;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #333333;
+  padding: 0 1rem;
+}
+
+.category {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
