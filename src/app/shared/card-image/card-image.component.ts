@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { Movie } from './card-image';
+import { Movie } from '../../movie/movie';
 
 @Component({
   selector: 'mm-card-image',
