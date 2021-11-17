@@ -1,0 +1,22 @@
+div.container {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: lighter;
+  color: #dd6c1b;
+}
+
+h3 {
+  font-weight: lighter;
+  margin: 1rem 0;
+}
+
+p {
+  font-weight: lighter;
+}
