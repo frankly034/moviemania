@@ -28,6 +28,15 @@ This is an Angular app to help people search through movies by categories, searc
 
 - The API employed for movie information was gotten developed by TMDB [here](https://www.themoviedb.org/).
 - Official API documentation for the movie db can be found [here](https://developers.themoviedb.org/3)
+- This app demonstrates the use of basic concepts of Angular Application 
+  - Modules
+  - Compnents structuring 
+  - Shared components
+  - Pipes
+  - Guards
+  - Routing
+  - Two way binding 
+  - Services 
 
 <!-- BUILT wITH -->
 
