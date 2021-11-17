@@ -57,6 +57,7 @@ See mock design guides for the app below;
 
 Find the live version [here](https://moviemania-app.netlify.app/).
 Below is a screenshot of what it looks like.
+
 https://user-images.githubusercontent.com/31358867/142187908-396f7f76-3304-4818-851b-148cf93bfec9.mp4
 
 
