@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Now Playing",
+    "tag": "now_playing"
+  },
+  {
+    "title": "Popular",
+    "tag": "popular"
+  },
+  {
+    "title": "Top Rated",
+    "tag": "top_rated"
+  },
+  {
+    "title": "Upcoming",
+    "tag": "upcoming"
+  }
+]

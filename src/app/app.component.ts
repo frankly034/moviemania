@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { Movie } from './movie/movie';
 import { SideBarMenu } from './shared/side-bar/side-bar';
+import  *  as  data  from  './movie-category-config.json';
 
 @Component({
   selector: 'mm-root',
@@ -11,28 +12,7 @@ import { SideBarMenu } from './shared/side-bar/side-bar';
 })
 export class AppComponent {
   title = 'moviemania';
-  sideBarMenu: SideBarMenu[] = [
-    {
-      title: 'Latest',
-      tag: 'latest',
-    },
-    {
-      title: 'Now Playing',
-      tag: 'now_playing',
-    },
-    {
-      title: 'Popular',
-      tag: 'popular',
-    },
-    {
-      title: 'Top Rated',
-      tag: 'top_rated',
-    },
-    {
-      title: 'Upcoming',
-      tag: 'upcoming',
-    },
-  ];
+  sideBarMenu: SideBarMenu[] = (data as any).default;
   movie: Movie = {
     backdrop_path: "/lNyLSOKMMeUPr1RsL4KcRuIXwHt.jpg",
     id: 580489,
