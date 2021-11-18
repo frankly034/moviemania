@@ -14,8 +14,8 @@ export class MovieService {
 
   constructor(private http: HttpClient) { }
 
-  getMovies(movieCategoryTag: string): Observable<MovieResponse> {
-    const url = `${this.movieUrl}${movieCategoryTag}?api_key=${this.apiKey}`
+  getMovies(movieCategoryTag: string, page?: number): Observable<MovieResponse> {
+    const url = `${this.movieUrl}${movieCategoryTag}?api_key=${this.apiKey}&page=${page || 1}`
     return this.http.get<MovieResponse>(url).pipe(
       catchError(this.handleError)
     )
