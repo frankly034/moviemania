@@ -20,6 +20,21 @@
   display: inline;
 }
 
+.pagination {
+  font-size: 1.2rem;
+  color: #666666;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination span:nth-child(2){
+  padding: 0 3rem;
+}
+
+.pagination .fa{
+  font-weight: bolder;
+}
+
 .container .body {
   display: flex;
   flex-direction: row;
