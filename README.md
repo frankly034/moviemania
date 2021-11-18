@@ -37,6 +37,8 @@ This is an Angular app to help people search through movies by categories, searc
   - Routing
   - Two way binding 
   - Services 
+  - HttpModule
+  - rxjs (Observables)
 
 <!-- BUILT wITH -->
 

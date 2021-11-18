@@ -30,6 +30,6 @@ import { FormsModule } from '@angular/forms';
       { path: '', component: MovieListComponent },
     ]),
   ],
-  exports: [ConvertToEllipsesPipe],
+  exports: [ConvertToEllipsesPipe, CommonModule],
 })
 export class MovieModule {}

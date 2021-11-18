@@ -3,33 +3,13 @@ import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTr
 import { Observable } from 'rxjs';
 import { SideBarMenu } from '../shared/side-bar/side-bar';
 import { ToastrNotificationService } from '../shared/toastr-notification-service/toastr-notification.service';
+import * as data from '../movie-category-config.json';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MovieCategoryCardGuard implements CanActivate {
-  sideBarMenu: SideBarMenu[] = [
-    {
-      title: 'Latest',
-      tag: 'latest',
-    },
-    {
-      title: 'Now Playing',
-      tag: 'now_playing',
-    },
-    {
-      title: 'Popular',
-      tag: 'popular',
-    },
-    {
-      title: 'Top Rated',
-      tag: 'top_rated',
-    },
-    {
-      title: 'Upcoming',
-      tag: 'upcoming',
-    },
-  ];
+  sideBarMenu: SideBarMenu[] = (data as any).default;
   constructor(private router: Router, private toastNotificationService: ToastrNotificationService) {}
   canActivate(
     route: ActivatedRouteSnapshot,
