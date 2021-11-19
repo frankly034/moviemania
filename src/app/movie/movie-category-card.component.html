@@ -7,5 +7,6 @@
     <div *ngFor="let movie of movieCategory.movies; let movieIndex=index">
       <mm-card-image [movie]="movie" *ngIf="movieIndex < 4"></mm-card-image>
     </div>
+    <h2 *ngIf="!movieCategory.movies.length">No items found</h2>
   </div>
 </div>
