@@ -26,7 +26,7 @@ export class MovieService {
     if(err.error instanceof ErrorEvent){
       errorMessage = `An error occured: ${err.error.message}`;
     } else {
-      errorMessage = err.error.status_message;
+      errorMessage = err.error.status_message || err.statusText;
     }
     return throwError(errorMessage)
   }
