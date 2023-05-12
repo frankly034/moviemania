@@ -9,6 +9,7 @@ import { CardImageComponent } from '../shared/card-image/card-image.component';
 import { ConvertToEllipsesPipe } from '../shared/convert-to-ellipses-pipes/convert-to-ellipses.pipe';
 import { MovieCategoryCardGuard } from './movie-category-card.guard';
 import { FormsModule } from '@angular/forms';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FormsModule } from '@angular/forms';
       },
       { path: '', component: MovieListComponent },
     ]),
+    NgxSkeletonLoaderModule.forRoot(),
   ],
   exports: [ConvertToEllipsesPipe, CommonModule],
 })

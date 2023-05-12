@@ -3,6 +3,7 @@ header {
   position: sticky;
   top: 0;
   background-color: #fdfdfd;
+  z-index: 2;
 }
 
 header h2 {
@@ -67,7 +68,7 @@ footer span {
   cursor: pointer;
 }
 
-footer .credits h3{
+footer .credits h3 {
   font-size: 1rem;
   font-weight: lighter;
 }
