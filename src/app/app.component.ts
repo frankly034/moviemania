@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Movie } from './movie/movie';
 import { SideBarMenu } from './shared/side-bar/side-bar';
 import * as data from './movie-category-config.json';
 
