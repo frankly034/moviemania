@@ -1,19 +1,16 @@
 <div class="card">
-  <div *ngIf="!poasterLoaded">
-    <ngx-skeleton-loader
-      [theme]="{
-        'border-radius': '5px',
-        height: '260px',
-        'animation-duration': '2s'
-      }"
-    >
-    </ngx-skeleton-loader>
-    <ngx-skeleton-loader> </ngx-skeleton-loader>
-    <ngx-skeleton-loader> </ngx-skeleton-loader>
-  </div>
-  <div *ngIf="poasterLoaded">
+  <div>
     <div class="card-image">
-      <img src="{{ poaster.src }}" alt="movie poster" />
+      <ngx-skeleton-loader
+        *ngIf="!poasterLoaded"
+        [theme]="{
+          'border-radius': '5px',
+          height: '280px',
+          'animation-duration': '2s'
+        }"
+      >
+      </ngx-skeleton-loader>
+      <img src="{{ poaster.src }}" alt="movie poster" *ngIf="poasterLoaded" />
     </div>
     <div class="card-body">
       <h3 class="card-title">

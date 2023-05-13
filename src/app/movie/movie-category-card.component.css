@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0 1rem 0 0;
+  margin-bottom: 1rem;
 }
 
 .container .header button {
@@ -26,13 +27,13 @@
 h2 {
   font-size: 1.5rem;
   color: #333333;
-  padding: 0 1rem;
 }
 
 .category {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .category h2 {

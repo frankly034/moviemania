@@ -23,10 +23,10 @@ export class MovieListComponent implements OnInit, OnDestroy {
     private toastNotificationService: ToastrNotificationService
   ) {}
 
-  moviesSub(category: string, index: number): void {
+  fetchAndUpdateMovieCategoryList(category: string, index: number): void {
     this.sub = this.movieService.getMovies(category).subscribe({
       next: (movieResponse: MovieResponse) => {
-        this.movieCategories[index].movies = movieResponse.results;
+        this.movieCategories[index].movies = movieResponse.results.slice(0, 4);
       },
       error: (err) => this.toastNotificationService.showError(err, 'Error'),
     });
@@ -39,7 +39,7 @@ export class MovieListComponent implements OnInit, OnDestroy {
         tag: menu.tag,
         title: menu.title,
       });
-      this.moviesSub(menu.tag, index);
+      this.fetchAndUpdateMovieCategoryList(menu.tag, index);
     });
   }
 

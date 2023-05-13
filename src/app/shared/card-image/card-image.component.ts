@@ -22,7 +22,6 @@ export class CardImageComponent implements OnInit {
 
     if (this.poaster.complete) {
       this.poasterLoaded = true;
-      return;
     }
 
     this.poaster.onload = () => {
@@ -30,7 +29,7 @@ export class CardImageComponent implements OnInit {
     };
 
     this.poaster.onerror = () => {
-      this.poasterLoaded = false;
+      this.poaster.src = '../../../assets/clapper-board.jpg';
     };
   }
 

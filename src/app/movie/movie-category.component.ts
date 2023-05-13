@@ -30,12 +30,12 @@ export class MovieCategoryComponent implements OnInit, DoCheck, OnDestroy {
   ) {}
 
   nextPage(): void {
-    this.page = ++this.page;
+    this.page = this.page === this.totalPages ? 1 : ++this.page;
     this.trigger = true;
   }
 
   prevPage(): void {
-    this.page = --this.page;
+    this.page = this.page === 1 ? this.totalPages : --this.page;
     this.trigger = true;
   }
 
@@ -74,7 +74,10 @@ export class MovieCategoryComponent implements OnInit, DoCheck, OnDestroy {
 
   ngDoCheck(): void {
     const categoryParam = this.route.snapshot.paramMap.get('category');
-    if (categoryParam && this.category !== categoryParam || categoryParam && this.trigger) {
+    if (
+      (categoryParam && this.category !== categoryParam) ||
+      (categoryParam && this.trigger)
+    ) {
       this.moviesSub(categoryParam);
       this.category = categoryParam;
       this.title = this.route.snapshot.queryParamMap.get('title');

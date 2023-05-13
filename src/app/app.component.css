@@ -33,9 +33,6 @@ header h2 .logo:hover {
 
 .wrapper {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
 .sidebar {
@@ -45,7 +42,6 @@ header h2 .logo:hover {
 }
 
 .content {
-  width: 90%;
   flex: 9 200px;
   padding: 1rem;
 }
