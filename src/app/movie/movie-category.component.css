@@ -6,7 +6,7 @@
 .container .header {
   margin-bottom: 1rem;
   padding: 1.5rem;
-  background-color: #FFC400;
+  background-color: #ffc400;
   border-radius: 5px;
   display: flex;
   flex-direction: row;
@@ -25,13 +25,14 @@
   color: #666666;
   display: flex;
   justify-content: center;
+  vertical-align: middle;
 }
 
-.pagination span:nth-child(2){
+.pagination span:nth-child(2) {
   padding: 0 3rem;
 }
 
-.pagination .fa{
+.pagination .fa {
   font-weight: bolder;
 }
 
@@ -71,4 +72,8 @@ div.input-group span {
 
 div.input-group input:focus {
   outline: none;
+}
+
+.hide {
+  visibility: hidden;
 }
