@@ -11,34 +11,32 @@ export class CardImageComponent implements OnInit {
   @Input() movie!: Movie;
   ratingSize!: number[];
   releaseDate!: Date;
-  imageLoaded!: boolean;
-  poasterPath!: string;
+  poasterLoaded!: boolean;
+  poaster!: HTMLImageElement;
 
   constructor() {}
 
   checkIfImageExists() {
-    const img = new Image();
-    img.src = this.poasterPath;
+    this.poaster = new Image();
+    this.poaster.src = `${process.env.NG_APP_TMDB_BASE_IMAGE_URL}${this.movie.poster_path}`;
 
-    if (img.complete) {
-      this.imageLoaded = true;
-    } else {
-      img.onload = () => {
-        this.imageLoaded = true;
-      };
-
-      img.onerror = () => {
-        this.imageLoaded = false;
-      };
+    if (this.poaster.complete) {
+      this.poasterLoaded = true;
+      return;
     }
+
+    this.poaster.onload = () => {
+      this.poasterLoaded = true;
+    };
+
+    this.poaster.onerror = () => {
+      this.poasterLoaded = false;
+    };
   }
 
   ngOnInit(): void {
-    this.ratingSize = [
-      ...Array(Math.round(this.movie.vote_average / 2)).keys(),
-    ];
+    this.ratingSize = Array(Math.round(this.movie.vote_average / 2));
     this.releaseDate = new Date(this.movie.release_date);
-    this.poasterPath = `https://image.tmdb.org/t/p/original${this.movie.poster_path}`;
     this.checkIfImageExists();
   }
 }

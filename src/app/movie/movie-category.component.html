@@ -6,10 +6,18 @@
       <span class="fa fa-search"></span>
     </div>
   </div>
-  <div class='pagination' *ngIf="filteredMovies.length">
-    <span class="fa fa-chevron-left" (click)="prevPage()" *ngIf="page !== 1"></span>
-    <span>Page {{page}} of {{totalPages}}</span>
-    <span class="fa fa-chevron-right" (click)="nextPage()" *ngIf="page < totalPages"></span>
+  <div class="pagination" *ngIf="filteredMovies.length">
+    <span
+      class="fa fa-chevron-left"
+      (click)="prevPage()"
+      [ngClass]="{ hide: page === 1 }"
+    ></span>
+    <span>Page {{ page }} of {{ totalPages }}</span>
+    <span
+      class="fa fa-chevron-right"
+      (click)="nextPage()"
+      [ngClass]="{ hide: page === totalPages }"
+    ></span>
   </div>
   <div class="body">
     <div *ngFor="let movie of filteredMovies; let movieIndex = index">
@@ -17,9 +25,17 @@
     </div>
     <h2 *ngIf="!filteredMovies.length">No items found</h2>
   </div>
-  <div class='pagination' *ngIf="filteredMovies.length">
-    <span class="fa fa-chevron-left" (click)="prevPage()" *ngIf="page !== 1"></span>
-    <span>Page {{page}} of {{totalPages}}</span>
-    <span class="fa fa-chevron-right" (click)="nextPage()" *ngIf="page < totalPages"></span>
+  <div class="pagination" *ngIf="filteredMovies.length">
+    <span
+      class="fa fa-chevron-left"
+      (click)="prevPage()"
+      [ngClass]="{ hide: page === 1 }"
+    ></span>
+    <span>Page {{ page }} of {{ totalPages }}</span>
+    <span
+      class="fa fa-chevron-right"
+      (click)="nextPage()"
+      [ngClass]="{ hide: page === totalPages }"
+    ></span>
   </div>
 </div>

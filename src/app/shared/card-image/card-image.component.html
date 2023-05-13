@@ -1,9 +1,9 @@
 <div class="card">
-  <div *ngIf="!imageLoaded">
+  <div *ngIf="!poasterLoaded">
     <ngx-skeleton-loader
       [theme]="{
         'border-radius': '5px',
-        height: '275px',
+        height: '260px',
         'animation-duration': '2s'
       }"
     >
@@ -11,9 +11,9 @@
     <ngx-skeleton-loader> </ngx-skeleton-loader>
     <ngx-skeleton-loader> </ngx-skeleton-loader>
   </div>
-  <div *ngIf="imageLoaded">
+  <div *ngIf="poasterLoaded">
     <div class="card-image">
-      <img src="{{ poasterPath }}" alt="movie poster" />
+      <img src="{{ poaster.src }}" alt="movie poster" />
     </div>
     <div class="card-body">
       <h3 class="card-title">
