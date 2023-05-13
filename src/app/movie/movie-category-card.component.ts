@@ -14,9 +14,8 @@ export class MovieCategoryCardComponent implements OnInit {
   ngOnInit(): void {}
 
   viewAllCategory() {
-    return this.router.navigate(
-      [`/movie/category/${this.movieCategory.tag}`], 
-      { queryParams: { title: this.movieCategory.title },
+    return this.router.navigate([`/movie/category/${this.movieCategory.tag}`], {
+      queryParams: { title: this.movieCategory.title },
     });
   }
 }
