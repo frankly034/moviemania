@@ -68,3 +68,21 @@ footer .credits h3 {
   font-size: 1rem;
   font-weight: lighter;
 }
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex: unset;
+    padding: 1rem;
+  }
+
+  .content {
+    flex: unset;
+    padding: 1rem;
+  }
+}

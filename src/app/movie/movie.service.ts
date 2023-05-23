@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { MovieResponse } from './movie-response';
+import { Movie } from './movie';
 
 @Injectable({
   providedIn: 'root',
@@ -21,6 +22,11 @@ export class MovieService {
       this.apiKey
     }&page=${page || 1}`;
     return this.http.get<MovieResponse>(url).pipe(catchError(this.handleError));
+  }
+
+  getMovieById(movieId: number): Observable<Movie> {
+    const url = `${this.movieUrl}${movieId}?api_key=${this.apiKey}`;
+    return this.http.get<Movie>(url).pipe(catchError(this.handleError));
   }
 
   handleError(err: HttpErrorResponse) {

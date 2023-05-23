@@ -4,6 +4,10 @@
   width: 200px;
 }
 
+.card:hover {
+  cursor: pointer;
+}
+
 .card-image img {
   width: 200px;
   height: 300px;

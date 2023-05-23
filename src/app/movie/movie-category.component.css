@@ -76,3 +76,9 @@ div.input-group span {
 div.input-group input:focus {
   outline: none;
 }
+
+@media only screen and (max-width: 623px) {
+  .container .body {
+    justify-content: center;
+  }
+}
