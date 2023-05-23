@@ -1,28 +1,30 @@
 <div class="card">
-  <div>
-    <div class="card-image">
-      <ngx-skeleton-loader
-        *ngIf="!poasterLoaded"
-        [theme]="{
-          'border-radius': '5px',
-          height: '280px',
-          'animation-duration': '2s'
-        }"
-      >
-      </ngx-skeleton-loader>
-      <img src="{{ poaster.src }}" alt="movie poster" *ngIf="poasterLoaded" />
-    </div>
-    <div class="card-body">
-      <h3 class="card-title">
-        <span>{{ movie.title | convertToEllipses }}</span>
-        <span>({{ releaseDate.getFullYear() }})</span>
-      </h3>
-    </div>
-    <div class="card-footer">
-      <div>
-        <span class="fa fa-star" *ngFor="let index of ratingSize"></span>
+  <a [routerLink]="['/movie', movie.id]">
+    <div>
+      <div class="card-image">
+        <ngx-skeleton-loader
+          *ngIf="!poasterLoaded"
+          [theme]="{
+            'border-radius': '5px',
+            height: '280px',
+            'animation-duration': '2s'
+          }"
+        >
+        </ngx-skeleton-loader>
+        <img src="{{ poaster.src }}" alt="movie poster" *ngIf="poasterLoaded" />
       </div>
-      {{ movie.vote_count }} votes
+      <div class="card-body">
+        <h3 class="card-title">
+          <span>{{ movie.title | convertToEllipses }}</span>
+          <span>({{ releaseDate.getFullYear() }})</span>
+        </h3>
+      </div>
+      <div class="card-footer">
+        <div>
+          <span class="fa fa-star" *ngFor="let index of ratingSize"></span>
+        </div>
+        {{ movie.vote_count }} votes
+      </div>
     </div>
-  </div>
+  </a>
 </div>

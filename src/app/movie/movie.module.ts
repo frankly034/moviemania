@@ -1,21 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
+import { ConvertToEllipsesPipe } from '../shared/convert-to-ellipses-pipes/convert-to-ellipses.pipe';
+import { MovieCategoryCardGuard } from './movie-category-card.guard';
+
+import { CardImageComponent } from '../shared/card-image/card-image.component';
 import { MovieCategoryComponent } from './movie-category.component';
 import { MovieListComponent } from './movie-list.component';
 import { MovieCategoryCardComponent } from './movie-category-card.component';
-import { CardImageComponent } from '../shared/card-image/card-image.component';
-import { ConvertToEllipsesPipe } from '../shared/convert-to-ellipses-pipes/convert-to-ellipses.pipe';
-import { MovieCategoryCardGuard } from './movie-category-card.guard';
-import { FormsModule } from '@angular/forms';
-import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { MovieDetailComponent } from './movie-detail.component';
 
 @NgModule({
   declarations: [
     MovieListComponent,
     MovieCategoryComponent,
     MovieCategoryCardComponent,
+    MovieDetailComponent,
     CardImageComponent,
     ConvertToEllipsesPipe,
   ],
@@ -27,6 +30,10 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
         path: 'movie/category/:category',
         canActivate: [MovieCategoryCardGuard],
         component: MovieCategoryComponent,
+      },
+      {
+        path: 'movie/:id',
+        component: MovieDetailComponent,
       },
       { path: '', component: MovieListComponent },
     ]),

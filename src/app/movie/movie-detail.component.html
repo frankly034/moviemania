@@ -1,0 +1,53 @@
+<p class="nav">
+  <a (click)="goBack()">
+    <span class="fa fa-arrow-left"></span>
+    Go back
+  </a>
+</p>
+<div class="row">
+  <div class="image-container">
+    <img src="{{ movie.poster_path }}" alt="movie poster" />
+  </div>
+  <div class="card-summary">
+    <h1 class="title">{{ movie.original_title }}</h1>
+    <div class="basic-summary">
+      <div>
+        <span class="fa fa-video-camera"></span>
+        <span>{{ movie.runtime }} mins</span>
+      </div>
+      <div>
+        <span class="fa fa-calendar"></span>
+        <span>{{ movie.release_date }}</span>
+      </div>
+      <div>
+        <span class="fa fa-money"></span>
+        <span>{{ movie.formatted_budget }}</span>
+      </div>
+    </div>
+    <div class="genres">
+      <span class="genre" *ngFor="let genre of movie.genres">{{
+        genre.name
+      }}</span>
+    </div>
+    <div class="rating">
+      <div class="rating-card">
+        <span>{{ movie.vote_average }}</span>
+        <span class="fa fa-star"></span>
+      </div>
+      <div class="rating-card">
+        <span>{{ movie.vote_count }}</span>
+        <span class="fa fa-thumbs-o-up"></span>
+      </div>
+    </div>
+    <div class="overview">
+      <h3>Movie Info</h3>
+      <p>{{ movie.overview }}</p>
+    </div>
+    <div class="extras">
+      <p>
+        <span class="sub-title">Language:</span> {{ movie.original_language }}
+      </p>
+      <p><span class="sub-title">Popularity:</span> {{ movie.popularity }}</p>
+    </div>
+  </div>
+</div>
